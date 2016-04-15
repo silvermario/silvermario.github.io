@@ -1,0 +1,28 @@
+{
+  "name": "silvermario.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvermario/silvermario.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvermario/silvermario.github.io/issues"
+  },
+  "homepage": "https://github.com/silvermario/silvermario.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.2.0",
+    "tiny-lr": "^0.2.1"
+  }
+}

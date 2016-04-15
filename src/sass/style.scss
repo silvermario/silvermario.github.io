@@ -1,0 +1,167 @@
+// generic transform
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+body {
+  background: gray;
+  color: white;
+  padding-top: 0px;
+}
+h1 {
+  font-family: Courier;
+  font-size: 46px;
+  text-shadow: 2px 1px 2px #444;
+}
+h2 {
+  font-family: Courier;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #444;
+  padding-bottom: 50px;
+}
+h3 {
+  font-family: Courier;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #444;
+}
+.navbar-default {
+  background: transparent;
+  border:medium none;
+  height: 100px;
+  padding: 30px 0;
+  transition:  0.5s ease 0s;
+  text-transform: uppercase;
+}
+.navbar-shrink {
+  background: #222;
+  height: 80px;
+  padding: 15px 0;
+  transition:  0.5s ease 0s;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 20px;
+  transition: ease 0.1s;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  margin: 2px 0;
+  transition: ease 0.5s;
+}
+.navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li > a:hover  {
+  background: white;
+  color: #333;
+  border-radius:8%;
+}
+.navbar-brand {
+  padding: 0 0 0 20px;
+}
+.navbar-shrink .navbar-brand img {
+  height: 60px;
+  transition: 0.5s;
+  background: transparent;
+}
+.navbar-toggle {
+  background: #ccc;
+}
+.navbar-brand img {
+  height: 151px;
+  transition: 0.5s;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: solid 0;
+  box-shadow: 0;
+}
+#home, #services, #portfolio, #contact {
+  padding-top: 110px;
+}
+#home,  #contact {
+  height: 925px;
+}
+
+#home{
+  background: #fff url("https://41.media.tumblr.com/6545a5d8a0197d19704ef4acec3fe280/tumblr_o48zv7gkLw1qcv8n5o5_r1_1280.jpg")  no-repeat center center / cover;
+  padding-top: 0;
+}
+#home .row {
+  padding-top: 250px;
+}
+
+.btn {
+  padding: 24px 26px;
+  margin-bottom:5px;
+  font-size: 28px;
+  background: black;
+  color: white;
+  border-radius: 15px;
+  border-color: black;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  background: white;
+  transition: all 0.3s ease 0s;
+}
+#services {
+  background: #fff url("https://40.media.tumblr.com/91fe099b31bf4291ceca6db87e224e43/tumblr_o48zv7gkLw1qcv8n5o3_1280.jpg") no-repeat fixed center center / cover;
+}
+
+#services .bg-white {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#portfolio {
+ background: #fff url("https://41.media.tumblr.com/e531df6bd5ca5de3eb31e243f360903c/tumblr_o48zv7gkLw1qcv8n5o1_1280.jpg")  no-repeat center center / cover;
+}
+.portfolio-item {
+  margin-bottom: 10px;
+  max-width: 400px;
+}
+.portfolio-hover {
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity:0;
+  text-align: center;
+}
+.portfolio-hover:hover {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.portfolio-hover i {
+  color: #EEE;
+  position: absolute;
+  margin-top: -20px;
+  top: 50%;
+  left:0;
+  width: 100%;
+}
+.portfolio-hover:hover i {
+  @include rotate(45);
+  transition: 0.5s;
+}
+.portfolio-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+}
+.portfolio-caption {
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 5px 10px;
+  max-width: 400px;
+  height: 100px;
+}
+#contact {
+ background: #fff url("https://40.media.tumblr.com/48dd76709aef46d8dab806b5640ba3e6/tumblr_o48zv7gkLw1qcv8n5o6_r1_1280.jpg") no-repeat fixed center center / cover;
+}
