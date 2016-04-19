@@ -41,14 +41,12 @@ h3 {
   font-size: 20px;
   transition: ease 0.1s; }
 
-.navbar-default .navbar-nav > li > a:hover {
-  margin: 2px 0;
-  transition: ease 0.5s; }
-
 .navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li > a:hover {
   background: white;
   color: #333;
-  border-radius: 8%; }
+  border-radius: 8%;
+  margin: 3px 0 -3px;
+  transition: ease 0.5s; }
 
 .navbar-brand {
   padding: 0 0 0 20px; }
@@ -72,11 +70,12 @@ h3 {
 #home, #services, #portfolio, #contact {
   padding-top: 110px; }
 
-#home, #contact {
-  height: 925px; }
+#home, #contact, #services, #portfolio {
+  min-height: 925px; }
 
 #home {
-  background: #fff url("https://41.media.tumblr.com/6545a5d8a0197d19704ef4acec3fe280/tumblr_o48zv7gkLw1qcv8n5o5_r1_1280.jpg") no-repeat center center/cover;
+  background: #663399;
+  /*url("https://41.media.tumblr.com/6545a5d8a0197d19704ef4acec3fe280/tumblr_o48zv7gkLw1qcv8n5o5_r1_1280.jpg")  no-repeat center center / cover;*/
   padding-top: 0; }
 
 #home .row {
@@ -103,7 +102,7 @@ h3 {
   background: rgba(255, 255, 255, 0.2); }
 
 #portfolio {
-  background: #fff url("https://41.media.tumblr.com/e531df6bd5ca5de3eb31e243f360903c/tumblr_o48zv7gkLw1qcv8n5o1_1280.jpg") no-repeat center center/cover; }
+  background: #fff url("https://41.media.tumblr.com/e531df6bd5ca5de3eb31e243f360903c/tumblr_o48zv7gkLw1qcv8n5o1_1280.jpg") no-repeat fixed center center/cover; }
 
 .portfolio-item {
   margin-bottom: 10px;
@@ -151,3 +150,16 @@ h3 {
 
 #contact {
   background: #fff url("https://40.media.tumblr.com/48dd76709aef46d8dab806b5640ba3e6/tumblr_o48zv7gkLw1qcv8n5o6_r1_1280.jpg") no-repeat fixed center center/cover; }
+
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  .navbar-default, .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background: #222222; }
+  .navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li > a:hover {
+    border-radius: 0; } }
+
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
